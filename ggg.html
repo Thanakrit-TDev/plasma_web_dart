@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+        }
+        .st{
+            font-size: 8em;
+            margin: 10px;
+            color: rgb(0, 255, 42);
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="randomNumber" class="st">0</div>
+    <div id="randomNumber1" class="st">00</div>
+    <div id="randomNumber2" class="st">000</div>
+    <div id="randomNumber3" class="st">0000</div>
+    <div id="randomNumber4" class="st">00000</div>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+
+    <script>
+        function generateRandomNumber() {
+            const randomNumber1 = Math.floor(Math.random() * 10); // 0 to 10 inclusive
+            document.getElementById('randomNumber').innerText = randomNumber1;
+            const randomNumber2 = Math.floor(Math.random() * (99 - 10 + 1)) + 10; // 0 to 10 inclusive
+            document.getElementById('randomNumber1').innerText = randomNumber2;
+            const randomNumber3 = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+            document.getElementById('randomNumber2').innerText = randomNumber3;
+            const randomNumber4 = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+            document.getElementById('randomNumber3').innerText = randomNumber4;
+            const randomNumber5 = Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000;
+            document.getElementById('randomNumber4').innerText = randomNumber5;
+        }
+
+        // Listen for keypress events on the input field
+        document.getElementById('inputField').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action of the Enter key (e.g., form submission)
+                generateRandomNumber();
+            }
+        });
+    </script>
+</body>
+</html>
