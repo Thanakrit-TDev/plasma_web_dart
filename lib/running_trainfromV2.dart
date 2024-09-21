@@ -310,11 +310,11 @@ class _MyHomePageState extends State<MyHomePage> {
               SideMenu(
                 hasResizerToggle: false,
                 hasResizer: false,
-                backgroundColor: Color(0xFFfef7ff),
+                backgroundColor: const Color(0xFFfef7ff),
                 builder: (data) => SideMenuData(
                     header: const Column(), items: [], footer: ai_process()),
               ),
-              Expanded(
+              const Expanded(
                 child: Center(
                   child: Column(
                     children: [
@@ -323,7 +323,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Color.fromARGB(255, 255, 153, 0),
                         size: 300,
                       ),
-                      Text("website support only pc (1080 x 1920)")
+                      Text("The screen width is not enough. Minimum (1920px)")
                     ],
                   ),
                 ),
@@ -336,7 +336,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   child: Column(
       //     children: [
       //       Icon(Icons.warning_amber_outlined,color: Color.fromARGB(255, 255, 153, 0),size: 300,),
-      //       Text("website support only pc (1080 x 1920)")
+      //       Text("The screen width is not enough. Minimum (1920px)")
       //     ],
       //   ),
       // );
@@ -1060,6 +1060,10 @@ class _Dashboard_Widget extends State<Dashboard_Widget> {
                               children: [
                                 Row(
                                   children: [
+                                    // Text(widget.Historylist_list[index].id),
+                                    // const SizedBox(
+                                    //   width: 20,
+                                    // ),
                                     Text(widget.Historylist_list[index].name),
                                     const SizedBox(
                                       width: 20,
@@ -1511,7 +1515,7 @@ class _Dashboard_Widget extends State<Dashboard_Widget> {
     final height = size.height;
 
     if (width <= 1460) {
-      return Center(
+      return const Center(
         child: Column(
           children: [
             Icon(
@@ -1519,7 +1523,7 @@ class _Dashboard_Widget extends State<Dashboard_Widget> {
               color: Color.fromARGB(255, 255, 153, 0),
               size: 300,
             ),
-            Text("website support only pc (1080 x 1920)")
+            Text("The screen width is not enough. Minimum (1920px)")
           ],
         ),
       );
@@ -1545,7 +1549,7 @@ class _Dashboard_Widget extends State<Dashboard_Widget> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Dashboard",
                               style: TextStyle(
                                   fontSize: 20, fontFamily: 'Poppins'),
@@ -2517,7 +2521,7 @@ class _DataCenter_WidgetState extends State<DataCenter_Widget> {
     final width = size.width;
     final height = size.height;
     if (width <= 1460) {
-      return Center(
+      return const Center(
         child: Column(
           children: [
             Icon(
@@ -2525,7 +2529,7 @@ class _DataCenter_WidgetState extends State<DataCenter_Widget> {
               color: Color.fromARGB(255, 255, 153, 0),
               size: 300,
             ),
-            Text("website support only pc (1080 x 1920)")
+            Text("The screen width is not enough. Minimum (1920px)")
           ],
         ),
       );
@@ -2837,7 +2841,7 @@ class _DataCenter_WidgetState_fortrain_model
     final width = size.width;
     final height = size.height;
     if (width <= 1460) {
-      return Center(
+      return const Center(
         child: Column(
           children: [
             Icon(
@@ -2845,7 +2849,7 @@ class _DataCenter_WidgetState_fortrain_model
               color: Color.fromARGB(255, 255, 153, 0),
               size: 300,
             ),
-            Text("website support only pc (1080 x 1920)")
+            Text("The screen width is not enough. Minimum (1920px)")
           ],
         ),
       );
